@@ -1,23 +1,23 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css';
-import { useData } from './contexts/Data';
+import GetMovie from './pages/GetMoviePage/GetMoviePage';
+import MoviePage from './pages/MoviePage/MoviePage';
+import Header from './components/Header/Header';
+
 
 function App() {
-  
-  const {getMovie, movieData} = useData();
-  const test =`&with_genres=28`;
-
-  React.useEffect(()=>{
-    console.log(movieData);
-  }, [movieData]);
-
-  function pegar(){
-    getMovie(test);
-  }
 
   return (
     <div className="App">
-     <button onClick={pegar}>Pegar</button>
+      <Header />
+      <BrowserRouter>
+          <Routes>
+            <Route path="/GetMovie" element={<GetMovie />} />
+            <Route path="/MoviePage" element={<MoviePage />} />
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
