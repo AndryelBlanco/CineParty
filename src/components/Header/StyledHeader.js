@@ -15,6 +15,7 @@ export const HeaderBar = styled.div`
     padding: 1rem;
 
     position: absolute;
+    z-index: 100;
 `;
 
 export const Logo = styled.h1`

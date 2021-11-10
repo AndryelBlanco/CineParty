@@ -7,7 +7,6 @@ export const GetMoviePage = styled.div`
     align-items: center;
     
     width: 100%;
-    height: 100vh;
 
     background-color: #E5E5E5;
     margin-top: 3.75rem;
@@ -42,6 +41,7 @@ export const Button = styled.button`
     outline: none;
     border: 1px solid ${colors.alternate_color};
     border-radius: 8px;
+    margin-top: 3rem;
 
     font-size: 1.075rem;
     font-weight: 600;
@@ -62,11 +62,12 @@ export const FilterContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    margin-top: 3rem;
 `;
 
 export const GenericContainer = styled.div`
     width: 25rem;
-    border: 1px solid blue;
 
     display: flex;
     flex-direction: column;
@@ -119,3 +120,4 @@ export const RetangleText = styled.span`
     font-size: 1rem;
     font-weight: 500;
 `;
+

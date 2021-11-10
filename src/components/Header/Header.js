@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ButtonText, HeaderBar, HeaderButton, Logo, LogoSubText } from './StyledHeader';
 
 const Header = () => {
@@ -6,7 +7,9 @@ const Header = () => {
         <HeaderBar>
             <Logo><LogoSubText>Cine</LogoSubText>Party</Logo>
             <HeaderButton>
-                <ButtonText>Get a Movie</ButtonText>
+                <Link to='/GetMovie' style={{textDecoration: 'none'}}>
+                    <ButtonText>Get a Movie</ButtonText>
+                </Link>
             </HeaderButton>
         </HeaderBar>
     )

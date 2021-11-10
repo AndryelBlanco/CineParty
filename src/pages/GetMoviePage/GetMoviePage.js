@@ -82,9 +82,11 @@ const GetMovie = () => {
     }
 
     function handleGetMovie(){
-
         if(URL_COMPLEMENT.length > 2){
             getRandomMovie(URL_COMPLEMENT);
+        }
+        else{
+            alert("Please select at least one filter");
         }
     }
 
@@ -114,8 +116,6 @@ const GetMovie = () => {
                             </WhiteRetangle>
                         ))}
                     </GenreFilters>
-                </GenericContainer>
-                <GenericContainer>
                     <GenericText>Release Year:</GenericText>
                     <GenreFilters>
                         {releaseList.map((year) => (

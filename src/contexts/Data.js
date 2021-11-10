@@ -9,19 +9,29 @@ export const DataProvider = ({children}) => {
 
     async function getRandomMovie(URL_COMPLEMENT){
         
-        const URL_PAGE = `&page=${Math.floor(Math.random() * (10)+ 1)}`;
+        const URL_PAGE = `&page=${Math.floor(Math.random() * (5)+ 1)}`;
         const response = await fetch(URL_BASE + URL_PAGE + URL_COMPLEMENT);
         const {results} = await response.json();
-        const {original_title, overview, poster_path, release_date, vote_average, backdrop_path} = results[Math.floor(Math.random() * 18 + 1)];
+        const {original_title, title, overview, poster_path, release_date, vote_average, backdrop_path} = results[Math.floor(Math.random() * (results.length) + 1)];
         setMovieData({
-            title: original_title,
+            original_title: original_title,
             overview: overview,
             release_date: release_date,
             vote_average: vote_average,
             poster: poster_path,
             backdrop: backdrop_path,
+            title: title,
         });
-        console.log(movieData);
+        // const {original_title, overview, poster_path, release_date, vote_average, backdrop_path} = results[0];
+        // setMovieData({
+        //     title: original_title,
+        //     overview: overview,
+        //     release_date: release_date,
+        //     vote_average: vote_average,
+        //     poster: poster_path,
+        //     backdrop: backdrop_path,
+        // });
+        // console.log(movieData);
     }
 
     return(
