@@ -5,6 +5,7 @@ import './App.css';
 import GetMovie from './pages/GetMoviePage/GetMoviePage';
 import MoviePage from './pages/MoviePage/MoviePage';
 import Header from './components/Header/Header';
+import HomePage from './pages/HomePage/HomePage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Header />
           <Routes>
+            <Route path="/" element={<HomePage/>} />
             <Route path="/GetMovie" element={<GetMovie />} />
             <Route path="/MoviePage" element={<MoviePage />} />
           </Routes>

@@ -10,15 +10,11 @@ const GetMovie = () => {
     const [elementGenreID, setElementGenreID] = React.useState(null);
     const [elementScoreID, setElementScoreID] = React.useState(null);
     const [elementYearID, setElementYearID] = React.useState(null);
-
-    const [URL_COMPLEMENT, setURL_COMPLEMENT] = React.useState(null);
     
     const [GENRE_URL, setGENRE_URL] = React.useState(``);
     const [SCORE_URL, setSCORE_URL] = React.useState(``);
     const [RELEASE_URL, setRELEASE_URL] = React.useState(``);
-
-
-    // let RELEASE_URL =`&primary_release_date.gte=2010-01-01`;
+    const [URL_COMPLEMENT, setURL_COMPLEMENT] = React.useState(``);
 
     let genresList = [
         {id: 28,name:'Action'},
@@ -53,6 +49,11 @@ const GetMovie = () => {
             navigate('/MoviePage');
         }
     }, [movieData]);
+
+
+    React.useEffect(() =>{
+        console.log(URL_COMPLEMENT);
+    },[URL_COMPLEMENT])
 
     React.useEffect(() => {
         setURL_COMPLEMENT(GENRE_URL + SCORE_URL + RELEASE_URL);

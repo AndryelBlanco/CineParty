@@ -107,6 +107,14 @@ export const MenuContainer = styled.div`
 
 `;
 
+export const ChangeFilterButton = styled.span`
+    font-size: 1rem;
+    font-weight: 300;
+    color: ${colors.primary_text_color};
+
+    cursor: pointer;
+`;
+
 export const SuggestionButton = styled.button`
     background-color: ${colors.alternate_color};
 

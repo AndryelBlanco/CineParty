@@ -32,6 +32,7 @@ export const Subtitle = styled.span`
     color: ${colors.secondary_text_color};
 `;
 
+
 export const Button = styled.button`
     width: 8.75rem;
     height: 2.75rem;

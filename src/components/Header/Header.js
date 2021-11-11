@@ -5,7 +5,9 @@ import { ButtonText, HeaderBar, HeaderButton, Logo, LogoSubText } from './Styled
 const Header = () => {
     return (
         <HeaderBar>
-            <Logo><LogoSubText>Cine</LogoSubText>Party</Logo>
+            <Link to='/' style={{textDecoration: 'none', cursor: 'pointer'}}>
+                <Logo><LogoSubText>Cine</LogoSubText>Party</Logo>
+            </Link>
             <HeaderButton>
                 <Link to='/GetMovie' style={{textDecoration: 'none'}}>
                     <ButtonText>Get a Movie</ButtonText>
