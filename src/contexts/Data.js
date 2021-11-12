@@ -29,8 +29,8 @@ export const DataProvider = ({children}) => {
             setError(err);
         } finally{
             const {results} = await json;
-            let length = results.length;
-            const {original_title, title, overview, poster_path, release_date, vote_average, backdrop_path} = results[Math.floor(Math.random() * length)];
+            let resultsSize = await json.results;
+            const {original_title, title, overview, poster_path, release_date, vote_average, backdrop_path} = results[Math.floor(Math.random() * resultsSize.length)];
             setMovieData({
                 original_title: original_title,
                 overview: overview,
