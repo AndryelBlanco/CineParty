@@ -14,18 +14,6 @@ export const DataProvider = ({children}) => {
     async function getRandomMovie(URL_COMPLEMENT){
         setCurrentURL(URL_COMPLEMENT);
         const URL_PAGE = `&page=${Math.floor(Math.random() * (5)+ 1)}`;
-        // const response = await fetch(URL_BASE + URL_PAGE + URL_COMPLEMENT);
-        // const {results} = await response.json();
-        // const {original_title, title, overview, poster_path, release_date, vote_average, backdrop_path} = results[Math.floor(Math.random() * (results.length) + 1)];
-        // setMovieData({
-        //     original_title: original_title,
-        //     overview: overview,
-        //     release_date: release_date,
-        //     vote_average: vote_average,
-        //     poster: poster_path,
-        //     backdrop: backdrop_path,
-        //     title: title,
-        // });       
         let response;
         let json;
 
@@ -40,8 +28,9 @@ export const DataProvider = ({children}) => {
             json = null;
             setError(err);
         } finally{
-            const {results} = json;
-            const {original_title, title, overview, poster_path, release_date, vote_average, backdrop_path} = results[Math.floor(Math.random() * results.length)];
+            const {results} = await json;
+            let length = results.length;
+            const {original_title, title, overview, poster_path, release_date, vote_average, backdrop_path} = results[Math.floor(Math.random() * length)];
             setMovieData({
                 original_title: original_title,
                 overview: overview,
