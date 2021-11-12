@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../Helper/StyleSheet";
+import { colors, device } from "../../Helper/StyleSheet";
 
 export const GetMoviePage = styled.div`
     display: flex;
@@ -12,6 +12,18 @@ export const GetMoviePage = styled.div`
     margin-top: 3.75rem;
     position: absolute;
     padding: 2rem 1rem;
+
+    @media ${device.tablet}{ 
+        height: fit-content;
+    }
+
+    @media ${device.laptop}{ 
+        height: fit-content;
+    } 
+
+    @media ${device.desktop}{ 
+        height: fit-content;
+    } 
 `;
 
 export const TitleContainer = styled.div`
@@ -25,11 +37,39 @@ export const TitleContainer = styled.div`
 export const Title = styled.h1`
     font-weight: 700;
     color: ${colors.primary_color};
+
+    @media ${device.mobileS}{ 
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    @media ${device.tablet}{ 
+        font-size: 2rem;
+        text-align: center;
+    } 
+
+    @media ${device.desktop}{ 
+        font-size: 3.2rem;
+    } 
 `;
 
 export const Subtitle = styled.span`
     font-weight: 400;
     color: ${colors.secondary_text_color};
+
+    @media ${device.mobileS}{ 
+        font-size: .8rem;
+        text-align: center;
+    }
+    
+    @media ${device.tablet}{ 
+        font-size: 1rem;
+        text-align: center;
+    } 
+
+    @media ${device.desktop}{ 
+        font-size: 1.8rem;
+    } 
 `;
 
 
@@ -55,6 +95,12 @@ export const Button = styled.button`
         border-color: #FD8C24;
         box-shadow: 0 0 0 3px #FF9635;      
     }
+
+    @media ${device.desktop}{ 
+        width: 18.75rem;
+        height: 4.75rem;
+        font-size: 2.075rem;
+    } 
 `;
 
 export const FilterContainer = styled.div`
@@ -65,6 +111,11 @@ export const FilterContainer = styled.div`
     justify-content: space-evenly;
 
     margin-top: 3rem;
+
+    @media ${device.desktop}{ 
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+    } 
 `;
 
 export const GenericContainer = styled.div`
@@ -81,6 +132,10 @@ export const GenericText = styled.span`
     color: ${colors.terciary_text_color};
 
     margin-bottom: 1.75rem;
+
+    @media ${device.desktop}{ 
+        font-size: 2rem;
+    } 
 `;
 
 export const GenreFilters = styled.div`
@@ -115,10 +170,19 @@ export const WhiteRetangle = styled.div`
         color: ${colors.primary_text_color} ;
     }
 
+    @media ${device.desktop}{ 
+        width: 10.75rem;
+        height: 4rem;
+    } 
+
 `;
 
 export const RetangleText = styled.span`
     font-size: 1rem;
     font-weight: 500;
+
+    @media ${device.desktop}{ 
+        font-size: 1.2rem;
+    } 
 `;
 

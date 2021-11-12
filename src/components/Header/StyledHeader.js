@@ -14,7 +14,7 @@ export const HeaderBar = styled.div`
     box-shadow: 0px 4px 39px rgba(0, 0, 0, 0.25);
     padding: 1rem;
 
-    position: absolute;
+    position: fixed;
     z-index: 100;
 `;
 

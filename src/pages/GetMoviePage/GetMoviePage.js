@@ -43,17 +43,10 @@ const GetMovie = () => {
     let releaseList = ["1950-1960", "1970-1980", "1990-2000", "2010+"];
 
     React.useEffect(() => {
-        // console.log(movieData);
         if(movieData !== null){
-            console.log('mudou');
             navigate('/MoviePage');
         }
     }, [movieData]);
-
-
-    React.useEffect(() =>{
-        console.log(URL_COMPLEMENT);
-    },[URL_COMPLEMENT])
 
     React.useEffect(() => {
         setURL_COMPLEMENT(GENRE_URL + SCORE_URL + RELEASE_URL);
