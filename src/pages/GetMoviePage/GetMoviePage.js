@@ -120,7 +120,7 @@ const GetMovie = () => {
                     </GenreFilters>
                 </GenericContainer>
             </FilterContainer>
-            <Button onClick={handleGetMovie}>Pegar dados</Button>
+            <Button onClick={handleGetMovie}>Find Movie</Button>
         </GetMoviePage>
     )
 }

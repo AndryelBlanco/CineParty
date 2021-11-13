@@ -1,10 +1,17 @@
 import React from 'react';
 import { AboutContainer, AboutImage, Button, Image, MainContainer, MainText, PageHome, TitleText, AboutTextContainer, SubText, Logo} from './StyledHomePage';
+import { useNavigate } from 'react-router';
 
 import illustration from '../../assets/vetor3D.png';
 import Movies from '../../assets/MoviesImage.png';
 
 const HomePage = () => {
+    let navigate = useNavigate();
+
+    function handleClick(){
+        navigate("/GetMovie");
+    }
+
     return (
         <PageHome>
             <MainContainer>
@@ -33,7 +40,7 @@ const HomePage = () => {
                         </filter>
                         </defs>
                     </Logo>
-                    <Button>Get Started</Button>
+                    <Button onClick={handleClick}>Get Started</Button>
                 </MainText>
                 <Image src={illustration}/>
             </MainContainer>
