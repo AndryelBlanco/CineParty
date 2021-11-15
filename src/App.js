@@ -6,6 +6,7 @@ import GetMovie from './pages/GetMoviePage/GetMoviePage';
 import MoviePage from './pages/MoviePage/MoviePage';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<HomePage/>} />
             <Route path="/GetMovie" element={<GetMovie />} />
             <Route path="/MoviePage" element={<MoviePage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
       </BrowserRouter>
     </div>
