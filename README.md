@@ -1,5 +1,6 @@
 
 # CineParty
+![Logo](./Logo.png)
 
 ![Gif](https://i.imgur.com/pdfJ89A.gif)
 
@@ -7,11 +8,10 @@ Seeking to solve a simple problem for people indecisive, Movie Party is a simple
 
 
 ### Go to site ➡️: [CineParty](https://cineparty.vercel.app/)
+
 ## Description 
 
 The web app also works as PWA. The user creates a filter and then presses a button which makes a request to the TMDB API which then returns some results, one of these results is selected at random and displayed to the user.
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 
 ## Tech Stack
